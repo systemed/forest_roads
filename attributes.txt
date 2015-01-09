@@ -1,0 +1,67 @@
+Notes on attribute meanings. A typical record will have attributes such as:
+	SYMBOL_COD=106
+	SYMBOL_NAM=Road, Not Maintained for Passenger Car
+	SURFACE_TY=NAT - NATIVE MATERIAL
+	OBJECTIVE_=2 - HIGH CLEARANCE VEHICLES
+	OPER_MAINT=2 - HIGH CLEARANCE VEHICLES
+	LANES=1 - SINGLE LANE
+	FUNCTIONAL=L - LOCAL
+
+SYMBOL_COD
+	100	Multi-Lane Divided Highway	# not used
+	101	Highway						# not used
+	106	Road, Not Maintained for Passenger Car
+	515	Dirt Road, Suitable for Passenger Car
+	517	Paved Road
+	518	Gravel Road, Suitable for Passenger Car	
+
+SURFACE_TY
+	AC - ASPHALT						Asphaltic Concrete
+	AGG - CRUSHED AGGREGATE OR GRAVEL	Crushed or screened graded material
+	BST - BITUMINOUS SURFACE TREATMENT	Built up surface of asphalt emulsion and aggregate, not a dust palliative.
+	CSOIL - COMPACTED SOIL				Compacted Native Material
+	FSOIL - FROZEN SOIL					Template has been cleared and rough shape completed but cannnot be used until frozen conditions exist.
+	IMP - IMPROVED NATIVE MATERIAL		Imported or processed material (pit run, select borrow, or admixture added to the surface soil and compacted)
+	NAT - NATIVE MATERIAL				No imported or processed materials
+	OTHER - OTHER						Other Surface Type - Specify in Remarks
+	P - PAVED							Unknown manufactured hard surface
+	PCC - PORTLAND CEMENT CONCRETE		Portland Cement Concrete
+
+FUNCTIONAL
+	A - ARTERIAL						An NFS road that provides service to large land areas and usually connects with other arterial roads or public highways.
+	C - COLLECTOR						An NFS road that serves smaller areas than an arterial road and that usually connects arterial roads to local roads or terminal facilities. Provides service to smaller land areas than an arterial road. It usually connects forest arterial roads to local forest roads or terminal facilities.
+	L - LOCAL							An NFS road that connects a terminal facility with collector roads, arterial roads, or public highways and that usually serves a single purpose involving intermittent use.
+
+SYSTEM
+	C - COUNTY, PARISH, BOROUGH			County, Parish or Borough
+	I - INTERSTATE HIGHWAY				Interstate Highway
+	L - LOCAL							Town, Township, Municipal Agency (City or other local civil government)
+	NFSR - NATIONAL FOREST SYSTEM ROAD	A classified forest road under the jurisdiction of the Forest Service. FSM 7705 (23 U.S.C. 101). Previously known as FDR - FOREST DEVELOPMENT ROAD.
+	OF - OTHER FEDERAL					Other Feferal Agency (such as BLM, NPS, BIA, etc.)
+	OS - OTHER STATE					State lands roads such as a Department of Natural Resources.
+	P - PRIVATE							Private
+	SH - STATE HIGHWAY					State Highway (primary or secondary)
+	TMP - TEMPORARY						Roads authorized by contract, permit, lease, other written authorization, or emergency operation not intended to be part of the forest transportation system and not necessary for long-term resource management. (36 CFR 212.1)
+	UND - UNDETERMINED					An existing road whose purpose and need has yet to be determined.
+	US - US HIGHWAY OR ROUTE			US Highway
+	NOT - NOT NEEDED					A road not needed for long term management of National Forest Resources (FSM 7712.01 B(2), (36 CFR 212))
+
+LANES
+	1 - SINGLE LANE
+	2 - DOUBLE LANE
+	3 - THREE LANE
+	4 - FOUR LANE
+
+SERVICE_LI
+	C - LONG TERM SERVICE				Continuous or annual recurrent service
+	I - INTERMITTENT TERM SERVICE		A road which is closed to vehicle traffic between periods of use. The closed period must exceed one year
+	IS - INTERMITTENT STORED SERVICE	Intermittent service road, closed to traffic. The road is in a condition that THERE IS LITTLE RESOURCE RISK IF maintenance IS NOT PERFORMED. (self-maintaining)
+	S - SHORT TERM SERVICE				Short term use (including temporary roads)
+
+
+OPER_MAINT
+	1 - BASIC CUSTODIAL CARE (CLOSED)	Assigned to roads that have been placed in storage (one year) between intermittent uses. Basic custodial maintenance is performed. Road is closed to vehicular traffic
+	2 - HIGH CLEARANCE VEHICLES			Assigned to roads open for use by high clearance vehicles.
+	3 - SUITABLE FOR PASSENGER CARS		Assigned to roads open for and maintained for travel by a prudent driver in a standard passenger car.
+	4 - MODERATE DEGREE OF USER COMFORT	Assigned to roads that provide a moderate degree of user comfort and convenience at moderate travel speeds.
+	5 - HIGH DEGREE OF USER COMFORT		Assigned to roads that provide a high degree of user comfort and convenience

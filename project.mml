@@ -1,0 +1,110 @@
+{
+  "bounds": [ -180,-85.051,180,83.66601980000002 ],
+  "center": [ -113.3683,47.8611,12 ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 16,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [ "forest_roads.mss" ],
+  "Layer": [
+    {
+      "Datasource": {
+        "file": "/usr/local/share/maps/data/ne_10m_ocean/ne_10m_ocean.shp", "type": "shape"
+      },
+      "class": "shp",
+      "geometry": "polygon",
+      "id": "ocean_lowres",
+      "name": "ocean_lowres",
+      "srs": "+proj=longlat +datum=WGS84 +no_defs",
+      "srs-name": "4326",
+      "status": "on",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.66601980000002
+      ],
+      "advanced": {}
+    },
+    {
+      "Datasource": {
+        "file": "/usr/local/share/maps/data/water-polygons-split-3857/water_polygons.shp", "type": "shape"
+      },
+      "class": "shp",
+      "geometry": "polygon",
+      "id": "ocean",
+      "name": "ocean",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "srs-name": "900913",
+      "status": "on",
+      "extent": [ -180,  -85.051, 180, 83.66601980000002 ],
+      "advanced": {}
+    },
+    {
+      "Datasource": {
+        "dbname": "forest_roads",
+      	"extent": [ -180,  -85.051, 180, 83.66601980000002 ],
+        "geometry_field": "geom",
+        "id": "forest_boundaries",
+        "key_field": "",
+        "project": "forest_roads",
+        "srs": "+proj=longlat +datum=WGS84 +no_defs",
+        "table": "( SELECT geom, forestname FROM forest_boundaries) AS data",
+        "type": "postgis",
+        "user": "richard"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "forest_boundaries",
+      "name": "forest_boundaries",
+      "srs": "+proj=longlat +datum=WGS84 +no_defs",
+      "srs-name": "4326"
+    },
+    {
+      "Datasource": {
+        "dbname": "forest_roads",
+      	"extent": [ -180,  -85.051, 180, 83.66601980000002 ],
+        "geometry_field": "geom",
+        "id": "forest_roads",
+        "key_field": "",
+        "project": "forest_roads",
+        "srs": "+proj=longlat +datum=WGS84 +no_defs",
+        "table": "( SELECT geom, symbol_cod, surface_ty, functional, system, lanes, service_li, oper_maint FROM forest_roads) AS data",
+        "type": "postgis",
+        "user": "richard"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "forest_roads",
+      "name": "forest_roads",
+      "srs": "+proj=longlat +datum=WGS84 +no_defs",
+      "srs-name": "4326"
+    },
+    {
+      "Datasource": {
+        "dbname": "forest_roads",
+      	"extent": [ -180,  -85.051, 180, 83.66601980000002 ],
+        "geometry_field": "geom",
+        "id": "forest_recreation",
+        "key_field": "",
+        "project": "forest_roads",
+        "srs": "+proj=longlat +datum=WGS84 +no_defs",
+        "table": "( SELECT name,fcsubtype,geom FROM forest_recreation) AS data",
+        "type": "postgis",
+        "user": "richard"
+      },
+      "class": "",
+      "geometry": "linestring",
+      "id": "forest_recreation",
+      "name": "forest_recreation",
+      "srs": "+proj=longlat +datum=WGS84 +no_defs",
+      "srs-name": "4326"
+    }
+  ],
+  "scale": 1,
+  "metatile": 4,
+  "attribution": "Data © US Forest Service",
+  "description": "",
+  "name": "Forest Roads"
+}
